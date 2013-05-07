@@ -1,10 +1,10 @@
 #include <stdio.h>
-
+#include <string.h>
 int main()
 {
     int option;
 
-    printf(" \nEnter option \nTo reverse_words_instring - 1\n");
+    printf(" \nEnter option \n\tTo reverse_words_instring - 1\n");
     scanf("%d",&option);
     switch(option)
     {
@@ -14,11 +14,12 @@ int main()
         
         default : break;
 	}
+    return 0;
 }
 
 int reverse_word_instring()
 {
-    char str[] ="veena i beautiful";
+    char str[] = "I have a GitHub repository";
 	int i=0, j=0, len =0, k = 0, l, start_loc = 0;
 
 	while(str[len] != '\0')
