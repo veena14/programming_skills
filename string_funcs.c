@@ -67,11 +67,38 @@ int sub_string()
      return 0;
 }
 
+int remove_repetitive_chars()
+{
+	int strlength = 0, i,j;
+	j = 0;
+	char str[] = "veeennasharaadaa";
+	char dst[20];
+	while(str[strlength] != '\0')
+		strlength++;
+	printf("\nstring length = %d\n", strlength);	
+	for(i =0; i<strlength; i++)
+	{
+		dst[j] = str[i];
+		if(str[i] == str[i+1])
+		{
+			i = i+1;
+		}
+		j++;
+
+	}
+	dst[j] = '\0';
+	printf("\noutput string is %s\n", dst); 
+
+	return 0;
+	
+}
+
 int main()
 {
     int option;
 
-    printf(" \nEnter option \n\tTo reverse_words_instring - 1\n\t strstr - 2\n");
+    printf(" \n----------- Enter option ------------ \n To reverse_words_instring - 1\n strstr - 2\n Remove consecutively occurring repetitive chars in a string - 3\n");
+    printf("----------------------------------------\n");	  
     scanf("%d",&option);
     switch(option)
     {
@@ -81,6 +108,9 @@ int main()
         case 2:
             sub_string();
             break;
+	case 3: 
+		remove_repetitive_chars();
+		break;
         
         default : break;
 	}
